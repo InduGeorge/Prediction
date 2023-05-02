@@ -33,7 +33,7 @@ def app():
   st.header('Machine Prediction Demo')
   input=st.text_area("Please enter the text", value="")
   if st.button("Predict"):
-    vec = vector.transform(input).toarray()
+    vec = vector.transform([input]).toarray()
     st.write('Headline:',input)
     st.write(str(list(naivebayes.predict(vec))[0]).replace('0', 'TECH').replace('1', 'BUSINESS').replace('2', 'SPORTS').replace('3','ENTERTAINMENT').replace('4','POLITICS'))
 app()
