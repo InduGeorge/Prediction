@@ -19,7 +19,7 @@ def app():
   vector = CountVectorizer(stop_words = 'english',lowercase=False)
   # fit the vectorizer on the training data
   vector.fit(X_train)
-  vector.vocabulary_
+ 
   X_transformed = vector.transform(X_train)
   X_transformed.toarray()
   # for test data
